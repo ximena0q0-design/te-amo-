@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+>
+<meta charset="UTF-8">
+<title>Para Ti 💕</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="fondo1">
+
+<div class="contenedor">
+    <h2>La contraseña son mis dos nombres ¿será que aún lo recuerdas? 😊</h2>
+    <input type="text" id="password" placeholder="Escribe la contraseña">
+    <button onclick="verificar()">Ingresar</button>
+    <p id="mensaje"></p>
+</div>
+
+<script>
+function verificar(){
+    let pass = document.getElementById("password").value.toLowerCase();
+    if(pass === "ximena liliana"){
+        window.location.href = "pregunta.html";
+    }else{
+        document.getElementById("mensaje").innerHTML = "Ups... intenta otra vez 💕";
+    }
+}
+</script>
+
+</body>
+</html>
