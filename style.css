@@ -1,0 +1,86 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+    color:white;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* 🌸 CONTENEDOR */
+.contenedor{
+    background: rgba(0,0,0,0.4);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter: blur(8px);
+    display:inline-block;
+    margin-top:15%;
+}
+
+h1, h2{
+    font-family: 'Dancing Script', cursive;
+    font-size:40px;
+}
+
+/* 🌸 BOTONES */
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:18px;
+    margin:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#si{
+    background:#ff4da6;
+    color:white;
+}
+
+#no{
+    background:#999;
+    color:white;
+}
+
+/* 🌸 FONDOS COMPLETOS SIN CORTAR */
+.fondo1, .fondo2, .fondo3{
+    background-size: contain; /* 🔥 CAMBIO IMPORTANTE */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: black; /* fondo si sobra espacio */
+}
+
+/* 🌸 CAMBIA AQUÍ TUS IMÁGENES */
+.fondo1{
+    background-image: url("https://animedep.com/wp-content/uploads/2025/07/kaoruko-waguri-de-thuong-ngot-ngao.webp");
+}
+
+.fondo2{
+    background-image: url("https://animedep.com/wp-content/uploads/2025/07/waguri-kaoruko-toc-bay-nhe.webp");
+}
+
+.fondo3{
+    background-image: url("https://wallpapercave.com/wp/wp14760910.jpg");
+}
+
+/* 🌸 CORAZONES FLOTANDO */
+.corazon{
+    position:absolute;
+    color: pink;
+    font-size:20px;
+    animation: flotar 6s linear infinite;
+}
+
+@keyframes flotar{
+    0%{
+        transform: translateY(100vh);
+        opacity:1;
+    }
+    100%{
+        transform: translateY(-10vh);
+        opacity:0;
+    }
+}
