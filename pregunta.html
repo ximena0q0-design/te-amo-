@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pregunta 💖</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+</head>
+<body class="fondo2">
+
+<div class="contenedor">
+    <h1>¿Quieres ser mi esposito? 💕</h1>
+
+    <button id="si" onclick="moverSi()">Sí 💘</button>
+    <button id="no" onmouseover="moverNo()">No 😅</button>
+</div>
+
+<script>
+let contador = 0;
+
+function moverSi(){
+    let boton = document.getElementById("si");
+
+    if(contador < 2){
+        boton.style.position = "absolute";
+        boton.style.left = Math.random()*500 + "px";
+        boton.style.top = Math.random()*400 + "px";
+        contador++;
+    }else{
+        window.location.href = "final.html";
+    }
+}
+
+function moverNo(){
+    let boton = document.getElementById("no");
+    boton.style.position = "absolute";
+    boton.style.left = Math.random()*500 + "px";
+    boton.style.top = Math.random()*400 + "px";
+}
+
+/* 🌸 CREAR CORAZONES */
+function crearCorazon(){
+    let corazon = document.createElement("div");
+    corazon.classList.add("corazon");
+    corazon.innerHTML = "💗";
+    corazon.style.left = Math.random()*100 + "vw";
+    corazon.style.fontSize = Math.random()*20 + 15 + "px";
+
+    document.body.appendChild(corazon);
+
+    setTimeout(()=>{
+        corazon.remove();
+    },6000);
+}
+
+setInterval(crearCorazon, 500);
+</script>
+
+</body>
+</html>
